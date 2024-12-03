@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Flocker Social Media Site 
+title: Striver Social Media Site 
 search_exclude: true
-description: Login and explore our social media hub for everything DNHS 
+description: Login and explore our social media hub for everything Striver related! 
 hide: true
 menu: nav/home.html
 ---
