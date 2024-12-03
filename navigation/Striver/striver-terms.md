@@ -7,7 +7,8 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
 ---
 
 <div class="sidebar">
-    <a href="/flocker_frontend/Striver/striver-home" class="sidebar-btn">🏠 Home</a>
+    <a href="/flocker_frontend/Striver/striver-achievements" class="sidebar-btn">⭐️ Achievements</a>
+    <a href="/flocker_frontend/Striver/striver-challenges" class="sidebar-btn">📉 Challenges</a>
     <a href="/flocker_frontend/Striver/striver-ai" class="sidebar-btn">🤖 AI</a>
     <a href="/flocker_frontend/Striver/striver-about" class="sidebar-btn">❓ About</a>
     <a href="/flocker_frontend/Striver/striver-terms" class="sidebar-btn">📄 Terms</a>
