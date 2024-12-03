@@ -1,17 +1,16 @@
 ---
 layout: base
-title: Create and Compete - Reality Room
+title: Striver Home
 search_exclude: true
-permalink: /create_and_compete/realityroom-home
-menu: nav/create_and_compete.html
-author: Yash, Nikhil, Rohan, Neil
+permalink: /Striver/striver-home
+author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
 ---
 
 <div class="sidebar">
-    <a href="/flocker_frontend/create_and_compete/realityroom-home" class="sidebar-btn">🏠 Home</a>
-    <a href="/flocker_frontend/create_and_compete/reality_game" class="sidebar-btn">🎮 Game</a>
-    <a href="/flocker_frontend/create_and_compete/reality-room-about" class="sidebar-btn">❓ About</a>
-    <a href="/flocker_frontend/create_and_compete/reality-room-terms" class="sidebar-btn">📄 Terms</a>
+    <a href="/flocker_frontend/Striver/striver-home" class="sidebar-btn">🏠 Home</a>
+    <a href="/flocker_frontend/Striver/striver-ai" class="sidebar-btn">🤖 AI</a>
+    <a href="/flocker_frontend/Striver/striver-about" class="sidebar-btn">❓ About</a>
+    <a href="/flocker_frontend/Striver/striver-terms" class="sidebar-btn">📄 Terms</a>
 </div>
 
 <div class="main">
