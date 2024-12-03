@@ -9,64 +9,8 @@ layout: post
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <div class="logo">Striver</div>
-      <div class="header-links">
-        <a href="#">Settings</a>
-        <a href="#">Your Profile</a>
-      </div>
-    </header>
-    <div class="main-content">
-      <aside class="sidebar">
-        <button class="btn">Achievements</button>
-        <button class="btn">Challenges</button>
-        <button class="btn">About</button>
-        <button class="btn">Terms</button>
-      </aside>
-      <main class="content">
-        <div class="post-section">
-          <input type="text" class="post-title" placeholder="Title">
-          <textarea class="post-text" placeholder="Post here"></textarea>
-        </div>
-        <div class="posts">
-          <div class="post">
-            <h3>Promotion</h3>
-            <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum...</p>
-            <button class="comment-btn">Click to Comment</button>
-          </div>
-          <div class="post">
-            <h3>Get a Dog</h3>
-            <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum...</p>
-            <button class="comment-btn">Click to Comment</button>
-          </div>
-          <div class="post">
-            <h3>Start Co.</h3>
-            <img src="https://via.placeholder.com/150" alt="Building Image">
-            <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum...</p>
-            <button class="comment-btn">Click to Comment</button>
-          </div>
-          <div class="post">
-            <h3>Best Career</h3>
-            <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum...</p>
-            <button class="comment-btn">Click to Comment</button>
-          </div>
-        </div>
-      </main>
-      <aside class="members-section">
-        <h3>Members</h3>
-        <ul class="members-list">
-          <li>Person</li>
-          <li>Person</li>
-          <li>Person</li>
-          <li>Person</li>
-          <li>Person</li>
-        </ul>
-      </aside>
-    </div>
-  </div>
 <style>
-    body {
+body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #121212;
@@ -178,5 +122,61 @@ layout: post
   padding: 5px 0;
 }
 </style>
+  <div class="container">
+    <header class="header">
+      <div class="logo">Striver</div>
+      <div class="header-links">
+        <a href="#">Settings</a>
+        <a href="#">Your Profile</a>
+      </div>
+    </header>
+    <div class="main-content">
+      <aside class="sidebar">
+        <button class="btn">Achievements</button>
+        <button class="btn">Challenges</button>
+        <button class="btn">About</button>
+        <button class="btn">Terms</button>
+      </aside>
+      <main class="content">
+        <div class="post-section">
+          <input type="text" class="post-title" placeholder="Title">
+          <textarea class="post-text" placeholder="Post here"></textarea>
+        </div>
+        <div class="posts">
+          <div class="post">
+            <h3>Promotion</h3>
+            <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum...</p>
+            <button class="comment-btn">Click to Comment</button>
+          </div>
+          <div class="post">
+            <h3>Get a Dog</h3>
+            <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum...</p>
+            <button class="comment-btn">Click to Comment</button>
+          </div>
+          <div class="post">
+            <h3>Start Co.</h3>
+            <img src="https://via.placeholder.com/150" alt="Building Image">
+            <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum...</p>
+            <button class="comment-btn">Click to Comment</button>
+          </div>
+          <div class="post">
+            <h3>Best Career</h3>
+            <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum...</p>
+            <button class="comment-btn">Click to Comment</button>
+          </div>
+        </div>
+      </main>
+      <aside class="members-section">
+        <h3>Members</h3>
+        <ul class="members-list">
+          <li>Person</li>
+          <li>Person</li>
+          <li>Person</li>
+          <li>Person</li>
+          <li>Person</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
 </body>
 </html>
