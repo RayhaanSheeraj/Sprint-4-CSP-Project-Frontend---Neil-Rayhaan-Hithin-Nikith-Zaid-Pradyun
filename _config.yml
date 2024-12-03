@@ -1,8 +1,8 @@
-title: DNHS Flocker
-description: "Social Media for Del Norte High School"
+title: Striver
+description: "Social Media Site for Tracking Achievements and Challenges"
 owner_name: John Mortensen
 github_username: nighthawkcoders
-github_repo: "flocker_frontend" 
+github_repo: "Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun" 
 baseurl: "/flocker_frontend"
 future: true
 remote_theme: jekyll/minima
