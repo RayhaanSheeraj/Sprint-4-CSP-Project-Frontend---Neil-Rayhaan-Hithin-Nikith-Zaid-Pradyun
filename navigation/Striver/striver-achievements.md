@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Striver Home
+title: Striver Achievements
 search_exclude: true
 permalink: /Striver/striver-achievements
 author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
