@@ -14,75 +14,14 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-terms" class="sidebar-btn">📄 Terms</a>
 </div>
 
+## Challenges
+Share your challenges with others!
+<br>
+<br>
+
 <div class="main">
     <div id="sidebar"></div>
     <div class="content">
-        <h2>Channels</h2>
-        <div class="friends-container">
-            <div class="friend">
-                <div class="profile-pic"><img src="https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Irma"></div>
-                <p>Irma</p>
-                <span class="live-badge">Live</span>
-            </div>
-            <div class="friend">
-                <div class="profile-pic"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Amanda"></div>
-                <p>Amanda</p>
-            </div>
-            <div class="friend">
-                <div class="profile-pic"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Luiz"></div>
-                <p>Luiz</p>
-            </div>
-            <div class="friend">
-                <div class="profile-pic"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Adam"></div>
-                <p>Nina</p>
-            </div>
-            <div class="friend">
-                <div class="profile-pic"><img src="https://images.unsplash.com/photo-1496672254107-b07a26403885?q=80&w=2788&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Irma"></div>
-                <p>Izaa</p>
-            </div>
-            <div class="friend">
-                <div class="profile-pic"><img src="https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Irma"></div>
-                <p>Irma</p>
-                <span class="live-badge">Live</span>
-            </div>
-            <div class="friend">
-                <div class="profile-pic"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Amanda"></div>
-                <p>Amanda</p>
-            </div>
-            <div class="friend">
-                <div class="profile-pic"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Luiz"></div>
-                <p>Luiz</p>
-            </div>
-            <div class="friend">
-                <div class="profile-pic"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Adam"></div>
-                <p>Nina</p>
-            </div>
-            <div class="friend">
-                <div class="profile-pic"><img src="https://images.unsplash.com/photo-1496672254107-b07a26403885?q=80&w=2788&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Irma"></div>
-                <p>Izaa</p>
-            </div>
-           <div class="friend">
-                <div class="profile-pic"><img src="https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Irma"></div>
-                <p>Irma</p>
-                <span class="live-badge">Live</span>
-            </div>
-            <div class="friend">
-                <div class="profile-pic"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Amanda"></div>
-                <p>Amanda</p>
-            </div>
-            <div class="friend">
-                <div class="profile-pic"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Luiz"></div>
-                <p>Luiz</p>
-            </div>
-            <div class="friend">
-                <div class="profile-pic"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Adam"></div>
-                <p>Nina</p>
-            </div>
-            <div class="friend">
-                <div class="profile-pic"><img src="https://images.unsplash.com/photo-1496672254107-b07a26403885?q=80&w=2788&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Irma"></div>
-                <p>Izaa</p>
-            </div>
-        </div>
         <div class="form-container">
             <form id="channelForm">
                 <div class="form-inputs">
