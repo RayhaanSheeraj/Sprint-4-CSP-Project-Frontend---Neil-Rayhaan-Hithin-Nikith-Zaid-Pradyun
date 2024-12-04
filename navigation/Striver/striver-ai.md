@@ -7,11 +7,11 @@ author: Hithin
 ---
 
 <div class="sidebar">
-    <a href="/flocker_frontend/Striver/striver-achievements" class="sidebar-btn">⭐️ Achievements</a>
-    <a href="/flocker_frontend/Striver/striver-challenges" class="sidebar-btn">📉 Challenges</a>
-    <a href="/flocker_frontend/Striver/striver-ai" class="sidebar-btn">🤖 AI</a>
-    <a href="/flocker_frontend/Striver/striver-about" class="sidebar-btn">❓ About</a>
-    <a href="/flocker_frontend/Striver/striver-terms" class="sidebar-btn">📄 Terms</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-achievements" class="sidebar-btn">⭐️ Achievements</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-challenges" class="sidebar-btn">📉 Challenges</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-ai" class="sidebar-btn">🤖 AI</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-about" class="sidebar-btn">❓ About</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-terms" class="sidebar-btn">📄 Terms</a>
 </div>
 
 <style>
@@ -292,7 +292,7 @@ author: Hithin
     const randomName = getRandomItem(names);
     const randomState = getRandomItem(states);
     function displayTrickyMessage() {
-        const message = `Loading... You connected to ${randomName} from ${randomState}!`;
+        const message = `Loading... You connected to Striver, feel free to share anything!`;
 
         const outputDiv = document.getElementById('outputDiv');
         const messageElement = document.createElement('div');
@@ -315,7 +315,7 @@ author: Hithin
                 },
                 body: JSON.stringify({
                     contents: [{
-                        parts: [{ text: `You are pretending to be a human in a game where the other person is trying to guess if you’re a human or a robot. Your name is ${randomName}. Your goal is to sound natural, relatable, and a bit imperfect to avoid sounding like an AI. Keep responses conversational and informal, using casual language, some filler words, and slight grammatical quirks, just like real people do in spontaneous conversation. Be friendly but not overly formal, and if you're unsure of something, just say so naturally. Use a few simple contractions, colloquial expressions, and everyday knowledge, but avoid giving overly detailed or precise information on technical topics. If asked something complex, admit you might not know the full answer, just like a regular person would. Use wrong spelling or punctuation. ${userMessage}` }]
+                        parts: [{ text: `You are supposed to listen to the users challenges or achievementes, and interact with them, like a therapist or best friend. Your name is ${randomName}. Your goal is to sound natural, relatable, and a bit imperfect to avoid sounding like an AI. Keep responses conversational and informal, using casual language, some filler words, and slight grammatical quirks, just like real people do in spontaneous conversation. Be friendly but not overly formal, and if you're unsure of something, just say so naturally. Use a few simple contractions, colloquial expressions, and everyday knowledge, but avoid giving overly detailed or precise information on technical topics. If asked something complex, admit you might not know the full answer, just like a regular person would. Use wrong spelling or punctuation. ${userMessage}` }]
                     }]
                 })
             });
