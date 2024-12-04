@@ -415,3 +415,36 @@ Share your achievements with others!
 
     fetchChannels();
 </script>
+<div class="members-section">
+    <h3>Members</h3>
+    <ul>
+        <li>Person</li>
+        <li>Person</li>
+        <li>Person</li>
+        <li>Person</li>
+    </ul>
+</div>
+
+<style>
+/* Members Section */
+.members-section {
+    padding: 20px;
+    color: white;
+    background-color: #000;
+    border-top: 1px solid gray;
+}
+
+.members-section h3 {
+    margin-bottom: 10px;
+}
+
+.members-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.members-section li {
+    padding: 5px 0;
+    font-size: 14px;
+}
+</style>
