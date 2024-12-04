@@ -105,7 +105,7 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
         position: fixed;
         top: 0;
         left: 0;
-        width: 150px;
+        width: 180px;
         height: 100%;
         background-color: #121212 !important;
         display: flex;
@@ -123,7 +123,7 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
         padding: 10px;
         border-radius: 8px;
         font-size: 16px;
-        width: 120px;
+        width: 160px;
         text-align: center;
         cursor: pointer;
         text-decoration: none;
