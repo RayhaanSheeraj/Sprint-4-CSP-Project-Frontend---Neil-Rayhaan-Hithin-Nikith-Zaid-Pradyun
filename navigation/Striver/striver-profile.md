@@ -49,15 +49,15 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
    <form>
      <div>
        <label for="newUid">Enter New Username:</label>
-       <input type="text" id="newUid" placeholder="New UID">
+       <input type="text" id="newUid" placeholder="Username">
      </div>
      <div>
        <label for="newName">Enter New Display Name:</label>
        <input type="text" id="newName" placeholder="New Name">
      </div>
       <div>
-       <label for="newPassword">Enter New Password:</label>
-       <input type="text" id="newPassword" placeholder="New Password">
+       <label for="newAboutMe">Change Your About Me:</label>
+       <input type="text" id="newAboutMe" placeholder="About me">
      </div>
      <br>
      <br>
@@ -290,31 +290,7 @@ window.changeUid = async function(uid) {
    }
 }
 
-window.changePassword = async function(password) {
-   if (password) {
-       const URL = pythonURI + "/api/user"; 
 
-       const options = {
-           URL,
-           body: { password },
-           message: 'password-message', 
-           callback: () => {
-               console.log('Password updated successfully!');
-               window.location.href = '/portfolio_2025/login'
-
-           }
-       };
-
-       try {
-            alert("You updated your password, so you will automatically be logged out. Be sure to remember your password!");
-           await putUpdate(options);
-           await logoutUser();
-       } catch (error) {
-           console.error('Error updating password:', error.message);
-           document.getElementById('password-message').textContent = 'Error updating password: ' + error.message;
-       }
-   }
-}
 
 window.changeName = async function(name) {
    if (name) {
@@ -350,11 +326,7 @@ document.getElementById('newName').addEventListener('change', function() {
 
 });
 
-document.getElementById('newPassword').addEventListener('change', function() {
-    const password = this.value;
-    window.changePassword(password);
 
-});
 
 window.fetchName = async function() {
     const URL = pythonURI + "/api/user"; 
