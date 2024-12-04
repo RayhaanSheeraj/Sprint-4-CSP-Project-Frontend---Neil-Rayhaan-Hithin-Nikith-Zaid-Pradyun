@@ -12,6 +12,7 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-ai" class="sidebar-btn">🤖 AI</a>
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-about" class="sidebar-btn">❓ About</a>
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-terms" class="sidebar-btn">📄 Terms</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-profile" class="sidebar-btn bottom-btn">👤 Profile</a>
 </div>
 
 <style>
@@ -50,6 +51,9 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
         text-align: center;
         cursor: pointer;
         text-decoration: none;
+    }
+    .bottom-btn {
+    margin-top: auto; /* Pushes the Terms button to the bottom */
     }
 </style>
 

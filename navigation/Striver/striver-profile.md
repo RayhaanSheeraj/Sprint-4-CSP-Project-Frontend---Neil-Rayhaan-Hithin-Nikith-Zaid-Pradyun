@@ -7,12 +7,12 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
 ---
 
 <div class="sidebar">
-    <a href="/flocker_frontend/Striver/striver-achievements" class="sidebar-btn">⭐️ Achievements</a>
-    <a href="/flocker_frontend/Striver/striver-challenges" class="sidebar-btn">📉 Challenges</a>
-    <a href="/flocker_frontend/Striver/striver-ai" class="sidebar-btn">🤖 AI</a>
-    <a href="/flocker_frontend/Striver/striver-about" class="sidebar-btn">❓ About</a>
-    <a href="/flocker_frontend/Striver/striver-terms" class="sidebar-btn">📄 Terms</a>
-    <a href="/flocker_frontend/Striver/striver-profile" class="sidebar-btn"> Profile</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-achievements" class="sidebar-btn">⭐️ Achievements</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-challenges" class="sidebar-btn">📉 Challenges</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-ai" class="sidebar-btn">🤖 AI</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-about" class="sidebar-btn">❓ About</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-terms" class="sidebar-btn">📄 Terms</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-profile" class="sidebar-btn bottom-btn">👤 Profile</a>
 </div>
 
 <style>
@@ -20,7 +20,7 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
         position: fixed;
         top: 0;
         left: 0;
-        width: 150px;
+        width: 180px;
         height: 100%;
         background-color: #121212 !important;
         display: flex;
@@ -38,10 +38,13 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
         padding: 10px;
         border-radius: 8px;
         font-size: 16px;
-        width: 120px;
+        width: 160px;
         text-align: center;
         cursor: pointer;
         text-decoration: none;
+    }
+    .bottom-btn {
+    margin-top: auto; /* Pushes the Terms button to the bottom */
     }
 </style>
 <div class="profile-container">
