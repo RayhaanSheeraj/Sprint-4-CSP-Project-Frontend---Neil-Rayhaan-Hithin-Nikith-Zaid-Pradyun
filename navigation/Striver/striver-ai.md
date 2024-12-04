@@ -3,15 +3,15 @@ layout: base
 title: Striver AI
 search_exclude: true
 permalink: /Striver/striver-ai
-author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
+author: Hithin
 ---
 
 <div class="sidebar">
-    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-achievements" class="sidebar-btn">⭐️ Achievements</a>
-    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-challenges" class="sidebar-btn">📉 Challenges</a>
-    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-ai" class="sidebar-btn">🤖 AI</a>
-    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-about" class="sidebar-btn">❓ About</a>
-    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-terms" class="sidebar-btn">📄 Terms</a>
+    <a href="/flocker_frontend/Striver/striver-achievements" class="sidebar-btn">⭐️ Achievements</a>
+    <a href="/flocker_frontend/Striver/striver-challenges" class="sidebar-btn">📉 Challenges</a>
+    <a href="/flocker_frontend/Striver/striver-ai" class="sidebar-btn">🤖 AI</a>
+    <a href="/flocker_frontend/Striver/striver-about" class="sidebar-btn">❓ About</a>
+    <a href="/flocker_frontend/Striver/striver-terms" class="sidebar-btn">📄 Terms</a>
 </div>
 
 <style>
@@ -66,15 +66,15 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
     <!-- Instructions Frame with Buttons Below -->
     <div class="instructions-frame">
         <div class="instructions-box">
-            <h3>Game Instructions</h3>
-            <p>Welcome to the Reality Room Game! Here are the instructions to get you started:</p>
+            <h3>Striver is here to assist you</h3>
+            <p>Welcome, I am an AI therapist that can give ideas on achievments as well. </p>
             <ul>
-                <li>Use the chat to interact with the AI.</li>
-                <li>Try to figure out if you're chatting with a human or an AI!</li>
-                <li>Submit your guess at the end of the game.</li>
-                <li>Have fun and see if you can outsmart the AI!</li>
+                <li>Use the chat to interact with the AI and I will respond with positive reinforcement and feedback.</li>
+                <li>Explain your achievments</li>
+                <li>This chat bot is powered by Gemini AI</li>
+                <li>Continue sharing achievements or ask for guidance on specific topics.</li>
             </ul>
-            <p id="score">Score:</p>
+            <p id="score">It is an honor to get to hear about you</p>
         </div>
     </div>
     <div id="guessPrompt" style="display: none;">
@@ -99,7 +99,7 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
         font-size: 8px;
     }
     h3 {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     #main-content {
         display: flex;
@@ -464,4 +464,40 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
         window.location.href = '{{site.baseurl}}/create_and_compete/realityroom';
     }
     }
+
 </script>
+
+<!-- Insert this inside the main content -->
+<div class="customization-panel">
+    <h4>Customize Appearance</h4>
+    <label for="bgColorSlider">Box Background Color:</label>
+    <input type="color" id="bgColorPicker" value="#ffffff" />
+    <label for="fontColorPicker">Font Color:</label>
+    <input type="color" id="fontColorPicker" value="#000000" />
+</div>
+
+<style>
+    .customization-panel {
+        margin-top: 20px;
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 8px;
+        width: fit-content;
+        color: black;
+    }
+</style>
+
+<script>
+    const boxElement = document.querySelector(".instructions-box");
+    const bgColorPicker = document.getElementById("bgColorPicker");
+    const fontColorPicker = document.getElementById("fontColorPicker");
+
+    bgColorPicker.addEventListener("input", () => {
+        boxElement.style.backgroundColor = bgColorPicker.value;
+    });
+
+    fontColorPicker.addEventListener("input", () => {
+        boxElement.style.color = fontColorPicker.value;
+    });
+</script>
+
