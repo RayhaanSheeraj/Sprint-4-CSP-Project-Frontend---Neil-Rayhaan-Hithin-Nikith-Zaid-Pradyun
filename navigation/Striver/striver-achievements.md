@@ -12,7 +12,6 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-ai" class="sidebar-btn">🤖 AI</a>
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-about" class="sidebar-btn">❓ About</a>
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-terms" class="sidebar-btn">📄 Terms</a>
-    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-profile" class="sidebar-btn bottom-btn">👤 Profile</a>
 </div>
 
 ## Achievements
@@ -67,9 +66,6 @@ Share your achievements with others!
         text-align: center;
         cursor: pointer;
         text-decoration: none;
-    }
-    .bottom-btn {
-    margin-top: auto; /* Pushes the Terms button to the bottom */
     }
     .main {
         display: flex;
@@ -419,77 +415,37 @@ Share your achievements with others!
 
     fetchChannels();
 </script>
-<div class="container">
-    <div class="post-section">
-        <input type="text" placeholder="Enter Title Here">
-        <textarea placeholder="Post Here"></textarea>
-        <button>Post</button>
-    </div>
-    <div class="members-section">
-        <h3>Members</h3>
-        <ul>
-            <li>Person</li>
-            <li>Person</li>
-            <li>Person</li>
-            <li>Person</li>
-            <li>Person</li>
-            <li>Person</li>
-            <li>Person</li>
-            <li>Person</li>
-        </ul>
-    </div>
+<div class="members-section">
+    <h3>Members</h3>
+    <ul>
+        <li>Person</li>
+        <li>Person</li>
+        <li>Person</li>
+        <li>Person</li>
+        <li>Person</li>
+        <li>Person</li>
+        <li>Person</li>
+        <li>Person</li>
+    </ul>
 </div>
-
 <style>
-/* Container for both sections */
-.container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #000;
-}
-
-/* Post Section */
-.post-section {
-    background-color: white;
-    padding: 20px;
-    width: 60%;
-}
-
-.post-section input,
-.post-section textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.post-section button {
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-
 /* Members Section */
 .members-section {
     background-color: #111;
     padding: 20px;
     width: 35%;
     color: white;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
 }
-
 .members-section h3 {
     margin-bottom: 10px;
 }
-
 .members-section ul {
     list-style: none;
     padding: 0;
 }
-
 .members-section li {
     padding: 5px 0;
     font-size: 14px;
