@@ -81,9 +81,9 @@ author: Hithin
             <p id="score">It is an honor to get to hear about you</p>
         </div>
     </div>
-    <div id="guessPrompt" style="display: none;">
+
         
-     
+  
 
 </div>
 
