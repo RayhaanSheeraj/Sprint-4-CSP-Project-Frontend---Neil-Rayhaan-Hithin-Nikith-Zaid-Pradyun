@@ -272,8 +272,8 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
   });
 
   function saveProfile() {
-    const username = document.getElementById("newUid").value || "Not set";
-    const aboutMe = document.getElementById("newAboutMe").value || "Not set";
+    const username = document.getElementById("newUid")?.value || "Not set";
+    const aboutMe = document.getElementById("newAboutMe")?.value || "Not set";
     document.getElementById("profile-message").textContent = "Profile saved successfully!";
     
     // replace this with actual fetch API logic
