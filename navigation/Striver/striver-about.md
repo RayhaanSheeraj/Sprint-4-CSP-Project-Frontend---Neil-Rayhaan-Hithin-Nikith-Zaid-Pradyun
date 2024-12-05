@@ -10,8 +10,9 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-achievements" class="sidebar-btn">⭐️ Achievements</a>
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-challenges" class="sidebar-btn">📉 Challenges</a>
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-ai" class="sidebar-btn">🤖 AI</a>
-    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-about" class="sidebar-btn active">❓ About</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-about" class="sidebar-btn">❓ About</a>
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-terms" class="sidebar-btn">📄 Terms</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-profile" class="sidebar-btn bottom-btn">👤 Profile</a>
 </div>
 
 <style>
@@ -56,7 +57,9 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
         text-decoration: none;
         transition: background 0.3s, transform 0.3s;
     }
-
+    .bottom-btn {
+    margin-top: auto; /* Pushes the Terms button to the bottom */
+    }
     .sidebar-btn:hover {
         background-color: #1e1e1e;
         transform: scale(1.05);
@@ -129,8 +132,35 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
 <div class="content">
     <h2>About Striver</h2>
 
-<p> Welcome to Striver, a platform dedicated to empowering individuals by celebrating achievements and providing support during challenges. Striver creates a space where users can reflect on their personal growth, share their accomplishments, and connect with others who understand their journey. It’s a safe, supportive environment designed to help users move forward with confidence and encouragement. </p>
+    <p>
+        Welcome to <strong>Striver</strong>, a platform designed to celebrate personal achievements and provide support during challenges. Whether you're aiming for growth, reflecting on milestones, or seeking a community, Striver is here for you.
+    </p>
 
-<p> On Striver, users can create personalized profiles to showcase their milestones and progress. The platform also features an anonymous chat system, allowing individuals to connect with others who have faced similar struggles. This unique feature fosters a sense of community and understanding, offering a place for open and supportive conversations. </p>
+    <div class="about-grid">
+        <div class="card">
+            <h3>🌟 Empowerment</h3>
+            <p>We help individuals share their milestones, connect with others, and celebrate every step forward, no matter how small.</p>
+        </div>
 
-<p> The home page serves as the central hub where users can post updates, engage with others through likes and comments, and explore a feed of inspiring stories. Striver also integrates the Gemini API, providing an AI-powered companion for personalized conversations. Whether reflecting on achievements or seeking guidance, the AI offers tailored support to enhance the experience. Join Striver today and become part of a community where every step forward is celebrated, every challenge is met with encouragement, and connections inspire growth. </p>
+        <div class="card">
+            <h3>💬 Connection</h3>
+            <p>Engage in open and supportive conversations through our anonymous chat system, fostering empathy and understanding.</p>
+        </div>
+
+        <div class="card">
+            <h3>🤖 AI Companion</h3>
+            <p>Meet Gemini, our AI-powered assistant, offering personalized guidance and encouragement throughout your journey.</p>
+        </div>
+
+        <div class="card">
+            <h3>📈 Growth</h3>
+            <p>Explore stories of triumph and progress on the home page, inspiring growth in yourself and others.</p>
+        </div>
+    </div>
+
+    <p>
+        Striver isn't just a platform; it's a community where achievements are celebrated, challenges are met with encouragement, and every story inspires growth. Together, let's create a world where progress is shared and celebrated.
+    </p>
+
+    <a href="/join" class="join-btn">Join Us Today</a>
+</div>

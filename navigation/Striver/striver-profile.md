@@ -7,12 +7,12 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
 ---
 
 <div class="sidebar">
-    <a href="/flocker_frontend/Striver/striver-achievements" class="sidebar-btn">⭐️ Achievements</a>
-    <a href="/flocker_frontend/Striver/striver-challenges" class="sidebar-btn">📉 Challenges</a>
-    <a href="/flocker_frontend/Striver/striver-ai" class="sidebar-btn">🤖 AI</a>
-    <a href="/flocker_frontend/Striver/striver-about" class="sidebar-btn">❓ About</a>
-    <a href="/flocker_frontend/Striver/striver-terms" class="sidebar-btn">📄 Terms</a>
-    <a href="/flocker_frontend/Striver/striver-profile" class="sidebar-btn"> Profile</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-achievements" class="sidebar-btn">⭐️ Achievements</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-challenges" class="sidebar-btn">📉 Challenges</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-ai" class="sidebar-btn">🤖 AI</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-about" class="sidebar-btn">❓ About</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-terms" class="sidebar-btn">📄 Terms</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-profile" class="sidebar-btn bottom-btn">👤 Profile</a>
 </div>
 
 <style>
@@ -20,7 +20,7 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
         position: fixed;
         top: 0;
         left: 0;
-        width: 150px;
+        width: 180px;
         height: 100%;
         background-color: #121212 !important;
         display: flex;
@@ -38,10 +38,13 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
         padding: 10px;
         border-radius: 8px;
         font-size: 16px;
-        width: 120px;
+        width: 160px;
         text-align: center;
         cursor: pointer;
         text-decoration: none;
+    }
+    .bottom-btn {
+    margin-top: auto; /* Pushes the Terms button to the bottom */
     }
 </style>
 <div class="profile-container">
@@ -49,15 +52,15 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
    <form>
      <div>
        <label for="newUid">Enter New Username:</label>
-       <input type="text" id="newUid" placeholder="New UID">
+       <input type="text" id="newUid" placeholder="Username">
      </div>
      <div>
        <label for="newName">Enter New Display Name:</label>
        <input type="text" id="newName" placeholder="New Name">
      </div>
       <div>
-       <label for="newPassword">Enter New Password:</label>
-       <input type="text" id="newPassword" placeholder="New Password">
+       <label for="newAboutMe">Change Your About Me:</label>
+       <input type="text" id="newAboutMe" placeholder="About me">
      </div>
      <br>
      <br>
@@ -290,31 +293,7 @@ window.changeUid = async function(uid) {
    }
 }
 
-window.changePassword = async function(password) {
-   if (password) {
-       const URL = pythonURI + "/api/user"; 
 
-       const options = {
-           URL,
-           body: { password },
-           message: 'password-message', 
-           callback: () => {
-               console.log('Password updated successfully!');
-               window.location.href = '/portfolio_2025/login'
-
-           }
-       };
-
-       try {
-            alert("You updated your password, so you will automatically be logged out. Be sure to remember your password!");
-           await putUpdate(options);
-           await logoutUser();
-       } catch (error) {
-           console.error('Error updating password:', error.message);
-           document.getElementById('password-message').textContent = 'Error updating password: ' + error.message;
-       }
-   }
-}
 
 window.changeName = async function(name) {
    if (name) {
@@ -350,11 +329,7 @@ document.getElementById('newName').addEventListener('change', function() {
 
 });
 
-document.getElementById('newPassword').addEventListener('change', function() {
-    const password = this.value;
-    window.changePassword(password);
 
-});
 
 window.fetchName = async function() {
     const URL = pythonURI + "/api/user"; 
