@@ -48,338 +48,236 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
         text-decoration: none;
     }
     .bottom-btn {
-    margin-top: auto; /* Pushes the Terms button to the bottom */
+    margin-top: auto; 
     }
 </style>
 <div class="profile-container">
- <div class="card">
-   <form>
-     <div>
-       <label for="newUid">Enter New Username:</label>
-       <input type="text" id="newUid" placeholder="Username">
-     </div>
-     <div>
-       <label for="newName">Enter New Display Name:</label>
-       <input type="text" id="newName" placeholder="New Name">
-     </div>
-      <div>
-       <label for="newAboutMe">Change Your About Me:</label>
-       <input type="text" id="newAboutMe" placeholder="About me">
-     </div>
-     <br>
-     <br>
-     <label for="profilePicture" class="file-icon"> Upload Profile Picture <i class="fas fa-upload"></i>
-     </label>
-     <input type="file" id="profilePicture" accept="image/*" onchange="saveProfilePicture()">
-     <div class="image-container" id="profileImageBox">
-     </div>
-     <p id="profile-message" style="color: red;"></p>
-   </form>
- </div>
+  <div class="card">
+    <div class="profile-box">
+      <div class="profile-picture">
+        <div class="image-container" id="profileImageBox">
+        </div>
+        <label for="profilePicture" class="file-icon">
+          Upload Profile Picture <i class="fas fa-upload"></i>
+        </label>
+        <input type="file" id="profilePicture" accept="image/*" onchange="saveProfilePicture()">
+      </div>
+      <div class="profile-fields">
+        <form id="profileForm">
+          <div>
+            <label for="newUid">Enter New Username:</label>
+            <input type="text" id="newUid" placeholder="Username">
+          </div>
+          <div>
+            <label for="newAboutMe">Change Your About Me:</label>
+            <input type="text" id="newAboutMe" placeholder="About me">
+          </div>
+          <p id="profile-message" style="color: red;"></p>
+        </form>
+      </div>
+    </div>
+    <div class="preview-box">
+      <h2>Preview</h2>
+      <div class="preview-content">
+        <div id="previewImageBox">
+        </div>
+        <div class="preview-text">
+          <p><strong>Username:</strong> <span id="previewUsername">Not set</span></p>
+          <p><strong>About Me:</strong> <span id="previewAboutMe">Not set</span></p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center;">
+      <button id="saveProfileButton" class="save-btn" onclick="saveProfile()">Save Profile</button>
+    </div>
+  </div>
 </div>
 
-<script type="module">
+<style>
+  body {
+    background-color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
 
-import {pythonURI, fetchOptions } from '{{site.baseurl}}/assets/js/api/config.js';
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 30px;
+  }
 
-import { putUpdate, postUpdate, deleteData, logoutUser } from "{{site.baseurl}}/assets/js/api/profile.js";
+  .card {
+    display: flex;
+    flex-direction: column;
+    background-color: #c62828;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    color: white;
+    max-width: 900px;
+    width: 95%;
+  }
 
-function updateTableWithData(data) {
-   const tableBody = document.getElementById('profileResult');
-   tableBody.innerHTML = '';
+  .profile-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
 
-   data.sections.forEach((section, index) => {
-       const tr = document.createElement('tr');
-       const themeCell = document.createElement('td');
-       const nameCell = document.createElement('td');
+  .profile-picture {
+    flex: 1;
+    text-align: center;
+  }
 
-       themeCell.textContent = section.theme;
-       nameCell.textContent = section.name;
+  .profile-picture img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid white;
+  }
 
-       const trashIcon = document.createElement('i');
-       trashIcon.className = 'fas fa-trash-alt trash-icon';
-       trashIcon.style.marginLeft = '10px';
-       themeCell.appendChild(trashIcon);
+  .file-icon {
+    display: inline-block;
+    color: white;
+    background-color: #b71c1c;
+    padding: 12px 20px;
+    border: 2px solid white;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+  }
 
-       trashIcon.addEventListener('click', async function (event) {
-           event.preventDefault();
-           const URL = pythonURI + "/api/user/section";
-           tr.remove();
+  #profilePicture {
+    display: none;
+  }
 
-           const options = {
-               URL,
-               body: { sections: [section.theme] },
-               message: 'profile-message',
-           };
+  .profile-fields {
+    flex: 2;
+    padding-left: 30px;
+  }
 
-           try {
-               await deleteData(options);
-           } catch (error) {
-               console.error('Error deleting section:', error.message);
-               document.getElementById('profile-message').textContent = 'Error deleting section: ' + error.message;
-           }
-       });
+  .profile-fields label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+  }
 
-      yearCell.classList.add('editable'); 
-      yearCell.innerHTML = `${section.year} <i class="fas fa-pencil-alt edit-icon" style="margin-left: 10px;"></i>`;
+  .profile-fields input {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 2px solid white;
+    background-color: #e57373;
+    color: white;
+    margin-bottom: 20px;
+  }
 
-       
-       yearCell.addEventListener('click', function () {
-           const input = document.createElement('input');
-           input.type = 'text';
-           input.value = section.year;
-           input.className = 'edit-input';
-           yearCell.innerHTML = '';
-           yearCell.appendChild(input);
+  .profile-fields input::placeholder {
+    color: #ffcccc;
+  }
 
-           input.focus();
+  .profile-fields input:focus {
+    outline: none;
+    border-color: white;
+  }
 
-           input.addEventListener('blur', async function () {
-               const newYear = input.value;
-               const URL = pythonURI + "/api/user/section";
-               const options = {
-                   URL,
-                   body: { section: { theme: section.theme, year: newYear } },
-                   message: 'profile-message',
-               };
+  .preview-box {
+    margin-top: 20px;
+    background-color: #b71c1c;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: left;
+  }
 
-               try {
-                   await putUpdate(options);
-               } catch (error) {
-                   console.error('Error updating year:', error.message);
-                   document.getElementById('profile-message').textContent = 'Error updating year: ' + error.message;
-               }
+  .preview-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+  }
 
-               yearCell.textContent = newYear;
-           });
+  .preview-content {
+    display: flex;
+    align-items: center;
+  }
 
-           input.addEventListener('keydown', function (event) {
-               if (event.key === 'Enter') {
-                   input.blur();
-               }
-           });
-       });
-       tr.appendChild(themeCell);
-       tr.appendChild(nameCell);
+  .preview-content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 3px solid white;
+  }
 
-       tableBody.appendChild(tr);
-   });
+  .preview-text {
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+  }
 
-}
+  .preview-text p {
+    margin: 5px 0;
+  }
 
+  .save-btn {
+    background-color: white;
+    color: #c62828;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+  }
 
-async function fetchUserProfile() {
-    const URL = pythonURI + "/api/id/pfp"; 
+  .save-btn:hover {
+    background-color: #b71c1c;
+    color: white;
+  }
+</style>
 
-    try {
-        const response = await fetch(URL, fetchOptions);
-        if (!response.ok) {
-            throw new Error(`Failed to fetch user profile: ${response.status}`);
-        }
-
-        const profileData = await response.json();
-        displayUserProfile(profileData);
-    } catch (error) {
-        console.error('Error fetching user profile:', error.message);
-       
-    }
-}
-
-function displayUserProfile(profileData) {
-    const profileImageBox = document.getElementById('profileImageBox');
-    if (profileData.pfp) {
-        const img = document.createElement('img');
-        img.src = `data:image/jpeg;base64,${profileData.pfp}`;
-        img.alt = 'Profile Picture';
-        profileImageBox.innerHTML = ''; 
-        profileImageBox.appendChild(img); 
-    } else {
-        profileImageBox.innerHTML = '<p>No profile picture available.</p>';
-    }
-
- 
-}
-
-window.saveProfilePicture = async function () {
-
-    const fileInput = document.getElementById('profilePicture');
+<script>
+  function saveProfilePicture() {
+    const fileInput = document.getElementById("profilePicture");
     const file = fileInput.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function() {
-            const profileImageBox = document.getElementById('profileImageBox');
-            profileImageBox.innerHTML = `<img src="${reader.result}" alt="Profile Picture">`;
-        };
-        reader.readAsDataURL(file);
-    }
-
     if (!file) return;
 
-    try {
-        const base64String = await convertToBase64(file);
-        await sendProfilePicture(base64String);
-        console.log('Profile picture uploaded successfully!');
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const previewImageBox = document.getElementById("previewImageBox");
+      const img = document.createElement("img");
+      img.src = e.target.result;
+      img.alt = "Preview Profile Picture";
+      previewImageBox.innerHTML = "";
+      previewImageBox.appendChild(img);
+    };
+    reader.readAsDataURL(file);
+  }
 
-    } catch (error) {
-        console.error('Error uploading profile picture:', error.message);
-      
-    }
-}
+  document.getElementById("newUid").addEventListener("input", function () {
+    const username = this.value || "Not set";
+    document.getElementById("previewUsername").textContent = username;
+  });
 
+  document.getElementById("newAboutMe").addEventListener("input", function () {
+    const aboutMe = this.value || "Not set";
+    document.getElementById("previewAboutMe").textContent = aboutMe;
+  });
 
-async function convertToBase64(file) {
-    return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onload = () => resolve(reader.result.split(',')[1]); 
-        reader.onerror = error => reject(error);
-        reader.readAsDataURL(file);
-    });
-}
+  function saveProfile() {
+    const username = document.getElementById("newUid").value || "Not set";
+    const aboutMe = document.getElementById("newAboutMe").value || "Not set";
+    document.getElementById("profile-message").textContent = "Profile saved successfully!";
+    
+    // replace this with actual fetch API logic
+    console.log("Profile saved:", { username, aboutMe });
 
-
-async function sendProfilePicture(base64String) {
-   const URL = pythonURI + "/api/id/pfp";
-
-   
-   const options = {
-       URL,
-       body: { pfp: base64String },
-       message: 'profile-message', 
-       callback: () => {
-           console.log('Profile picture uploaded successfully!');
-      
-       }
-   };
-
-   try {
-       await putUpdate(options);
-   } catch (error) {
-       console.error('Error uploading new profile picture:', error.message);
-       document.getElementById('profile-message').textContent = 'Error uploading new profile picture: ' + error.message;
-   }
-}
-  
-window.updateUidField = function(newUid) {
-  const uidInput = document.getElementById('newUid');
-  uidInput.value = newUid;
-  uidInput.placeholder = newUid;
-}
-
-window.updateNameField = function(newName) {
-  const nameInput = document.getElementById('newName');
-  nameInput.value = newName;
-  nameInput.placeholder = newName;
-}
-
-
-window.changeUid = async function(uid) {
-   if (uid) {
-       const URL = pythonURI + "/api/user";
-
-       const options = {
-           URL,
-           body: { uid },
-           message: 'uid-message', 
-           callback: () => {
-               alert("You updated your Github ID, so you will automatically be logged out. Be sure to remember your new github id to log in!");
-               console.log('UID updated successfully!');
-               window.updateUidField(uid);
-               window.location.href = '/portfolio_2025/login'
-           }
-       };
-
-       try {
-           await putUpdate(options);
-       } catch (error) {
-           console.error('Error updating UID:', error.message);
-           document.getElementById('uid-message').textContent = 'Error updating UID: ' + error.message;
-       }
-   }
-}
-
-
-
-window.changeName = async function(name) {
-   if (name) {
-       const URL = pythonURI + "/api/user";
-       const options = {
-           URL,
-           body: { name },
-           message: 'name-message',
-           callback: () => {
-               console.log('Name updated successfully!');
-               window.updateNameField(name);
-           }
-       };
-       try {
-           await putUpdate(options);
-       } catch (error) {
-           console.error('Error updating Name:', error.message);
-           document.getElementById('name-message').textContent = 'Error updating Name: ' + error.message;
-       }
-   }
-}
-
-document.getElementById('newUid').addEventListener('change', function() {
-    const uid = this.value;
-    window.changeUid(uid);
-
-});
-
-
-document.getElementById('newName').addEventListener('change', function() {
-    const name = this.value;
-    window.changeName(name);
-
-});
-
-
-
-window.fetchName = async function() {
-    const URL = pythonURI + "/api/user"; 
-
-    try {
-        const response = await fetch(URL, fetchOptions);
-        if (!response.ok) {
-            throw new Error(`Failed to fetch Name: ${response.status}`);
-        }
-
-        const data = await response.json();
-        return data.name;
-    } catch (error) {
-        console.error('Error fetching Name:', error.message);
-        return null;
-    }
-};
-
-window.setPlaceholders = async function() {
-    const uidInput = document.getElementById('newUid');
-    const nameInput = document.getElementById('newName');
-
-    try {
-        const uid = await window.fetchUid();
-        const name = await window.fetchName();
-
-        if (uid !== null) {
-            uidInput.placeholder = uid;
-        }
-        if (name !== null) {
-            nameInput.placeholder = name;
-        }
-    } catch (error) {
-        console.error('Error setting placeholders:', error.message);
-    }
-};
-
-document.addEventListener('DOMContentLoaded', async function () {
-    try {
-        await fetchUserProfile(); 
-        await setPlaceholders();
-    } catch (error) {
-        console.error('Initialization error:', error.message);
-   
-    }
-});f
 
 </script>
-
