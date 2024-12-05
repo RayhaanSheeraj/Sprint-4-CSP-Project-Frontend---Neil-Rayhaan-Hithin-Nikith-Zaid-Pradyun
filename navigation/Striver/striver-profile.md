@@ -243,6 +243,178 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
   }
 </style>
 
+div class="profile-container">
+  <div class="card">
+    <div class="profile-box">
+      <div class="profile-picture">
+        <div class="image-container" id="profileImageBox">
+        </div>
+        <label for="profilePicture" class="file-icon">
+          Upload Profile Picture <i class="fas fa-upload"></i>
+        </label>
+        <input type="file" id="profilePicture" accept="image/*" onchange="saveProfilePicture()">
+      </div>
+      <div class="profile-fields">
+        <form>
+          <div>
+            <label for="newUid">Enter New Username:</label>
+            <input type="text" id="newUid" placeholder="Username">
+          </div>
+          <div>
+            <label for="newAboutMe">Change Your About Me:</label>
+            <input type="text" id="newAboutMe" placeholder="About me">
+          </div>
+          <p id="profile-message" style="color: red;"></p>
+        </form>
+      </div>
+    </div>
+    <div class="preview-box">
+      <h2>Preview</h2>
+      <div class="preview-content">
+        <div id="previewImageBox">
+        </div>
+        <div class="preview-text">
+          <p><strong>Username:</strong> <span id="previewUsername">Not set</span></p>
+          <p><strong>About Me:</strong> <span id="previewAboutMe">Not set</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+ 
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 30px; 
+    background-color: #0000; 
+  }
+
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    background-color: #c62828; 
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    color: white;
+    max-width: 900px;
+    width: 95%;
+  }
+
+ 
+  .profile-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+ 
+  .profile-picture {
+    flex: 1;
+    text-align: center;
+  }
+
+  .profile-picture img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid white;
+  }
+
+  .file-icon {
+    display: inline-block;
+    color: white;
+    background-color: #b71c1c;
+    padding: 12px 20px;
+    border: 2px solid white;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  #profilePicture {
+    display: none;
+  }
+
+  .profile-fields {
+    flex: 2;
+    padding-left: 30px;
+  }
+
+  .profile-fields label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  .profile-fields input {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 2px solid white;
+    background-color: #e57373;
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .profile-fields input::placeholder {
+    color: #ffcccc;
+  }
+
+  .profile-fields input:focus {
+    outline: none;
+    border-color: white;
+  }
+
+  .preview-box {
+    margin-top: 20px;
+    background-color: #b71c1c;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: left;
+  }
+
+  .preview-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+  }
+
+  .preview-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .preview-content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 3px solid white;
+  }
+
+  .preview-text {
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .preview-text p {
+    margin: 5px 0;
+  }
+</style>
+
 <script>
   function saveProfilePicture() {
     const fileInput = document.getElementById("profilePicture");
@@ -270,14 +442,4 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
     const aboutMe = this.value || "Not set";
     document.getElementById("previewAboutMe").textContent = aboutMe;
   });
-
-  function saveProfile() {
-    const username = document.getElementById("newUid")?.value || "Not set";
-    const aboutMe = document.getElementById("newAboutMe")?.value || "Not set";
-    document.getElementById("profile-message").textContent = "Profile saved successfully!";
-    
-    // replace this with actual fetch API logic
-    console.log("Profile saved:", { username, aboutMe });
-
-
-</script>
+</script> 
