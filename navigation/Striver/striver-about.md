@@ -193,7 +193,10 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
         Striver isn't just a platform; it's a community where achievements are celebrated, challenges are met with encouragement, and every story inspires growth. Together, let's create a world where progress is shared and celebrated.
     </p>
 
-    <a href="/join" class="join-btn">Join Us Today</a>
+   <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-achievements" class="join-btn">Join Us Today</a>
+
+   
+
 
     <!-- Customization Section -->
     <div class="customization-container">
