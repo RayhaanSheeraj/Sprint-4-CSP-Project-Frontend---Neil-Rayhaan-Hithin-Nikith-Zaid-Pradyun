@@ -473,7 +473,7 @@ author: Hithin
     <label for="bgColorSlider">Box Background Color:</label>
     <input type="color" id="bgColorPicker" value="#ffffff" />
     <label for="fontColorPicker">Font Color:</label>
-    <input type="color" id="fontColorPicker" value="#000000" />
+    <input type="color" id="fontColorPicker" value="#ffffff" />
 </div>
 
 <style>
