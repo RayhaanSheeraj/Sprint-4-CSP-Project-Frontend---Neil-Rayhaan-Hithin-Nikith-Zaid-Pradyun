@@ -82,12 +82,8 @@ author: Hithin
         </div>
     </div>
     <div id="guessPrompt" style="display: none;">
-        <p class="modal-text">Who do you think you've been chatting with? Choose one:</p>
-        <div class="guess-options">
-            <button class="guess-button" onclick="submitGuess('human')">Human</button>
-            <button class="guess-button" onclick="submitGuess('ai')">AI</button>
-        </div>
-    </div>
+    
+
 </div>
 
 <style>
