@@ -6,6 +6,12 @@ permalink: /Striver/striver-profile
 author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
 ---
 
+
+<body>
+    <div style="width: 110px; height: 110px; background-color: gray; border-radius: 50%; position: absolute; top: 150px; left: 1080px;"></div>
+</body>
+
+
 <div class="sidebar">
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-achievements" class="sidebar-btn">⭐️ Achievements</a>
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-challenges" class="sidebar-btn">📉 Challenges</a>
