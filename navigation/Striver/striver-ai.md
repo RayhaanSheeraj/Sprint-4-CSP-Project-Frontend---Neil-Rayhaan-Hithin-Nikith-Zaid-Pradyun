@@ -82,7 +82,8 @@ author: Hithin
         </div>
     </div>
     <div id="guessPrompt" style="display: none;">
-    
+        
+        </div>
 
 </div>
 
