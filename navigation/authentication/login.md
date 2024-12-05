@@ -11,6 +11,7 @@ show_reading_time: false
 <br>
 
 <style>
+    
 .login-container {
     display: flex;
     justify-content: space-between;
@@ -37,7 +38,7 @@ show_reading_time: false
     width: 45%;
     border: 3px solid #07027d;
     border-radius: 50px;
-    padding: 20px;
+    padding: 40px;
      box-shadow: 10px 10px 25px rgba(23, 7, 201, 1);
     margin-bottom: 20px;
     overflow-x: auto; /* Enable horizontal scrolling */
@@ -48,6 +49,7 @@ show_reading_time: false
 }
 
 </style>
+
 
 <div class="login-container">
     <!-- Python Login Form -->
@@ -60,12 +62,14 @@ show_reading_time: false
                     <input type="text" name="uid" id="uid" required>
                 </label>
             </p>
+            <br>
             <p>
                 <label>
                     Password:
                     <input type="password" name="password" id="password" required>
                 </label>
             </p>
+            <br>
             <p>
                 <button type="submit">Login</button>
             </p>
@@ -77,22 +81,25 @@ show_reading_time: false
         <form id="signupForm" onsubmit="signup(); return false;">
             <p>
                 <label>
-                    Name:
+                    Name:       
                     <input type="text" name="name" id="name" required>
                 </label>
             </p>
+            <br>
             <p>
                 <label>
                     GitHub ID:
                     <input type="text" name="signupUid" id="signupUid" required>
                 </label>
             </p>
+            <br>
             <p>
                 <label>
                     Password:
                     <input type="password" name="signupPassword" id="signupPassword" required>
                 </label>
             </p>
+            <br>
             <p>
                 <button type="submit">Sign Up</button>
             </p>
