@@ -432,22 +432,25 @@ Share your achievements with others!
 /* Members Section */
 .members-section {
     background-color: #111;
-    padding: 20px;
-    width: 35%;
     color: white;
-    position: absolute;
+    width: 200px; /* Set width for the sidebar */
+    position: fixed; /* Fix it to the side */
     right: 0;
-    bottom: 20px;
+    top: 0;
+    bottom: 0; /* Stretch it vertically */
+    padding-top: 20px; /* Add padding from top */
+    text-align: left; /* Align text to the left */
+    z-index: 10; /* Ensure it stays above other elements */
 }
 .members-section h3 {
-    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 .members-section ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 .members-section li {
-    padding: 5px 0;
-    font-size: 14px;
+    margin: 10px 0;
 }
 </style>
