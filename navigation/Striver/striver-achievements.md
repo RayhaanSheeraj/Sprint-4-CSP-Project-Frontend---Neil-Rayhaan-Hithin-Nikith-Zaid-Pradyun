@@ -71,6 +71,15 @@ Share your achievements with others!
     .bottom-btn {
     margin-top: auto; /* Pushes the Terms button to the bottom */
     }
+    .sidebar-btn:hover {
+        background-color: #1e1e1e;
+        transform: scale(1.05);
+    }
+
+    .sidebar-btn.active {
+        background-color: #333;
+        font-weight: bold;
+    }
     .main {
         display: flex;
     }
@@ -426,29 +435,35 @@ Share your achievements with others!
         <li>Person</li>
         <li>Person</li>
         <li>Person</li>
+        <li>Person</li>
+        <li>Person</li>
+        <li>Person</li>
+        <li>Person</li>
     </ul>
 </div>
-
 <style>
 /* Members Section */
 .members-section {
-    padding: 20px;
+    background-color: #111;
     color: white;
-    background-color: #000;
-    border-top: 1px solid gray;
+    width: 200px; /* Set width for the sidebar */
+    position: fixed; /* Fix it to the side */
+    right: 0;
+    top: 0;
+    bottom: 0; /* Stretch it vertically */
+    padding-top: 20px; /* Add padding from top */
+    text-align: left; /* Align text to the left */
+    z-index: 10; /* Ensure it stays above other elements */
 }
-
 .members-section h3 {
-    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 20px;
 }
-
 .members-section ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
-
 .members-section li {
-    padding: 5px 0;
-    font-size: 14px;
+    margin: 10px 0;
 }
 </style>
