@@ -59,7 +59,7 @@ author: Hithin
 
 <div id="main-content">
     <div id="chatPanel">
-        <h3>Game</h3>
+        <h3>Chat Room</h3>
         <div id="outputDiv"></div>
         <form>
             <button class="plus-button" onclick="triggerFileUpload()">+</button>
@@ -286,7 +286,7 @@ author: Hithin
 </style>
 
 <script>
-    const names = ["John", "Sarah", "Alex", "Emily", "Michael", "Jessica", "David", "Laura"];
+    const names = ["Striver"];
     const states = ["Iowa", "California", "New York", "Texas", "Florida", "Nevada", "Ohio", "Michigan"];
 
     function getRandomItem(array) {
@@ -471,7 +471,6 @@ author: Hithin
 
 </script>
 
-<!-- Insert this inside the main content -->
 <div class="customization-panel">
     <h4>Customize Appearance</h4>
     <label for="bgColorSlider">Box Background Color:</label>
