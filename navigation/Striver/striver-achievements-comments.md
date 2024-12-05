@@ -24,7 +24,7 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
     position: fixed;
     left: 0;
     top: 0;
-    width: 200px;
+    width: 150px;
     height: 100%;
     background-color: #1c1c1c; /* Match the sidebar background */
     display: flex;
