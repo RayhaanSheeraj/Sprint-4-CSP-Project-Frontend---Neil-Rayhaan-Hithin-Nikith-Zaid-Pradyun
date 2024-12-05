@@ -415,23 +415,66 @@ Share your achievements with others!
 
     fetchChannels();
 </script>
-<div class="members-section">
-    <h3>Members</h3>
-    <ul>
-        <li>Person</li>
-        <li>Person</li>
-        <li>Person</li>
-        <li>Person</li>
-    </ul>
+<div class="container">
+    <div class="post-section">
+        <input type="text" placeholder="Enter Title Here">
+        <textarea placeholder="Post Here"></textarea>
+        <button>Post</button>
+    </div>
+    <div class="members-section">
+        <h3>Members</h3>
+        <ul>
+            <li>Person</li>
+            <li>Person</li>
+            <li>Person</li>
+            <li>Person</li>
+            <li>Person</li>
+            <li>Person</li>
+            <li>Person</li>
+            <li>Person</li>
+        </ul>
+    </div>
 </div>
 
 <style>
+/* Container for both sections */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #000;
+}
+
+/* Post Section */
+.post-section {
+    background-color: white;
+    padding: 20px;
+    width: 60%;
+}
+
+.post-section input,
+.post-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.post-section button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
 /* Members Section */
 .members-section {
+    background-color: #111;
     padding: 20px;
+    width: 35%;
     color: white;
-    background-color: #000;
-    border-top: 1px solid gray;
 }
 
 .members-section h3 {
