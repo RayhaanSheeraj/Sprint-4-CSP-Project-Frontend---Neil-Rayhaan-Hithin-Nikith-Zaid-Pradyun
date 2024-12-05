@@ -133,7 +133,7 @@ show_reading_time: false
 
         // Disable the button and change its color
         signupButton.disabled = true;
-        signupButton.style.backgroundColor = '#d3d3d3'; // Light gray to indicate disabled state
+        signupButton.style.backgroundColor = '#07027d'; // Light gray to indicate disabled state
 
         const signupOptions = {
             URL: `${pythonURI}/api/user`,
@@ -169,7 +169,7 @@ show_reading_time: false
             document.getElementById("signupMessage").textContent = `Signup Error: ${error.message}`;
             // Re-enable the button if there is an error
             signupButton.disabled = false;
-            signupButton.style.backgroundColor = ''; // Reset to default color
+            signupButton.style.backgroundColor = '#07027d'; // Reset to default color
         });
     }
 
