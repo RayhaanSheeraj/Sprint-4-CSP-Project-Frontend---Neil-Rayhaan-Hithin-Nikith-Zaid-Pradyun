@@ -20,6 +20,47 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
         </form>
     </div>
 <style>
+    .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    background-color: #1c1c1c; /* Match the sidebar background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    flex-direction: column;
+    gap: 20px; /* Space between buttons */
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Add subtle shadow */
+}
+.sidebar-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%; /* Makes the button width slightly less than the sidebar */
+    padding: 15px;
+    margin: 0 auto; /* Center the button horizontally */
+    background-color: #1c1c1c; /* Match the sidebar color */
+    border: 2px solid #ddd; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    color: white; /* Text color */
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Button font size */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+.sidebar-btn:hover {
+    background-color: #333333; /* Darker background on hover */
+    color: #ffffff; /* Ensure text is clear on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+</style>
+<style>
     table, th, td {
         border: 1px solid black;
         border-collapse: collapse;
