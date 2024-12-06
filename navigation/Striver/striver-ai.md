@@ -499,5 +499,29 @@ author: Hithin
     fontColorPicker.addEventListener("input", () => {
         boxElement.style.color = fontColorPicker.value;
     });
+
+body {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff9a76, #ffcd77, #fff59e, #b0f4e6, #80bfff, #9d74ff, #d96cff);
+    background-size: 150% 150%;
+    animation: gradientShift 10s ease infinite;
+    color: #fff;
+}
+
+/* Keyframes for animated gradient background */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 </script>
+
+
 
