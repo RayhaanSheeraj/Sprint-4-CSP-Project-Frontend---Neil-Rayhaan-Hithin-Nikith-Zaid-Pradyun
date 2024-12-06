@@ -431,14 +431,14 @@ Share your achievements with others!
 <div class="members-section">
     <h3>Members</h3>
     <ul>
-        <li>Person</li>
-        <li>Person</li>
-        <li>Person</li>
-        <li>Person</li>
-        <li>Person</li>
-        <li>Person</li>
-        <li>Person</li>
-        <li>Person</li>
+        <li>⚪ John</li>
+        <li>⚪ Mary</li>
+        <li>⚪ Jack</li>
+        <li>⚪ Bob</li>
+        <li>⚪ Matt</li>
+        <li>⚪ Mark</li>
+        <li>⚪ Juan</li>
+        <li>⚪ Travis</li>
     </ul>
 </div>
 <style>
