@@ -475,65 +475,29 @@ author: Hithin
     <label for="fontColorPicker">Font Color:</label>
     <input type="color" id="fontColorPicker" value="#ffffff" />
 </div>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customize Appearance</title>
-</head>
-<body>
-    <script>
-        // Create the instructions box
-        const boxElement = document.createElement("div");
-        boxElement.className = "instructions-box";
-        boxElement.textContent = "This is a customizable instructions box.";
-        document.body.appendChild(boxElement);
 
-        // Create the customization panel
-        const panelElement = document.createElement("div");
-        panelElement.className = "customization-panel";
-        panelElement.innerHTML = `
-            <h4>Customize Appearance</h4>
-            <label for="bgColorPicker">Box Background Color:</label>
-            <input type="color" id="bgColorPicker" value="#ffffff" />
-            <label for="fontColorPicker">Font Color:</label>
-            <input type="color" id="fontColorPicker" value="#000000" />
-        `;
-        document.body.appendChild(panelElement);
+<style>
+    .customization-panel {
+        margin-top: 20px;
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 8px;
+        width: fit-content;
+        color: black;
+    }
+</style>
 
-        // Add default styles
-        Object.assign(boxElement.style, {
-            padding: "20px",
-            border: "1px solid #ddd",
-            borderRadius: "8px",
-            backgroundColor: "#ffffff",
-            color: "#000000",
-            width: "fit-content",
-            marginBottom: "20px",
-        });
+<script>
+    const boxElement = document.querySelector(".instructions-box");
+    const bgColorPicker = document.getElementById("bgColorPicker");
+    const fontColorPicker = document.getElementById("fontColorPicker");
 
-        Object.assign(panelElement.style, {
-            marginTop: "20px",
-            backgroundColor: "#f4f4f4",
-            padding: "10px",
-            borderRadius: "8px",
-            width: "fit-content",
-            color: "black",
-        });
+    bgColorPicker.addEventListener("input", () => {
+        boxElement.style.backgroundColor = bgColorPicker.value;
+    });
 
-        // Handle background color change
-        const bgColorPicker = document.getElementById("bgColorPicker");
-        bgColorPicker.addEventListener("input", () => {
-            boxElement.style.backgroundColor = bgColorPicker.value;
-        });
-
-        // Handle font color change
-        const fontColorPicker = document.getElementById("fontColorPicker");
-        fontColorPicker.addEventListener("input", () => {
-            boxElement.style.color = fontColorPicker.value;
-        });
-    </script>
-</body>
-</html>
+    fontColorPicker.addEventListener("input", () => {
+        boxElement.style.color = fontColorPicker.value;
+    });
+</script>
 
