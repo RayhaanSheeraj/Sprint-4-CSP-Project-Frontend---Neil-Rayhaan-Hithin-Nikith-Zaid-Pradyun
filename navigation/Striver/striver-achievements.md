@@ -58,7 +58,7 @@ Share your achievements with others!
     .sidebar-btn {
         background-color: #121212;
         color: white !important;
-        border: 2px solid gray;
+        border: 2px solid cyan;
         margin: 10px 0;
         padding: 10px;
         border-radius: 8px;
