@@ -16,7 +16,7 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-badges" class="sidebar-btn bottom-btn">Badges</a>
 </div>
 
-## Challenges
+<h1 style="color:cyan;">Challenges</h1>
 Share your challenges with others!
 <br>
 <br>
@@ -39,7 +39,32 @@ Share your challenges with others!
     <div>
 </div>
 <div id="imageTest"></div>
-
+<style>
+/* Members Section */
+.members-section {
+    background-color: #111;
+    color: white;
+    width: 200px; /* Set width for the sidebar */
+    position: fixed; /* Fix it to the side */
+    right: 0;
+    top: 0;
+    bottom: 0; /* Stretch it vertically */
+    padding-top: 20px; /* Add padding from top */
+    text-align: left; /* Align text to the left */
+    z-index: 10; /* Ensure it stays above other elements */
+}
+.members-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.members-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.members-section li {
+    margin: 10px 0;
+}
+</style>
 <style>
     /* Sidebar */
     .sidebar {
@@ -302,6 +327,20 @@ Share your challenges with others!
     //     });
     // }
 </script>
+
+<div class="members-section">
+    <h3 style="color:cyan;">Members</h3>
+    <ul>
+        <li>⚪ John</li>
+        <li>⚪ Mary</li>
+        <li>⚪ Jack</li>
+        <li>⚪ Bob</li>
+        <li>⚪ Matt</li>
+        <li>⚪ Mark</li>
+        <li>⚪ Juan</li>
+        <li>⚪ Travis</li>
+    </ul>
+</div>
 
 <script type="module">
     import { pythonURI, fetchOptions } from '../assets/js/api/config.js';
