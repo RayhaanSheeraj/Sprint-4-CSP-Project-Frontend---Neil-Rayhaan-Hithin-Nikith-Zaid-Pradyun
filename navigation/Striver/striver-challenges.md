@@ -329,7 +329,7 @@ Share your challenges with others!
 </script>
 
 <div class="members-section">
-    <h3>Members</h3>
+    <h3 style="color:cyan;">Members</h3>
     <ul>
         <li>⚪ John</li>
         <li>⚪ Mary</li>
