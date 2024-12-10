@@ -54,7 +54,7 @@ show_reading_time: false
 <div class="login-container">
     <!-- Python Login Form -->
     <div class="login-card">
-        <h1 id="pythonTitle">User Login (Python/Flask)</h1>
+        <h1 id="pythonTitle">User Login</h1>
         <form id="pythonForm" onsubmit="pythonLogin(); return false;">
             <p>
                 <label>
@@ -77,7 +77,7 @@ show_reading_time: false
         </form>
     </div>
     <div class="signup-card">
-        <h1 id="signupTitle">Sign Up</h1>
+        <h1 id="signupTitle">Sign Up & Strive!</h1>
         <form id="signupForm" onsubmit="signup(); return false;">
             <p>
                 <label>
@@ -132,7 +132,7 @@ show_reading_time: false
         const signupButton = document.querySelector(".signup-card button");
 
         // Disable the button and change its color
-        signupButton.disabled = true;
+        signupButton.disabled = false;
         signupButton.style.backgroundColor = '#07027d'; // Light gray to indicate disabled state
 
         const signupOptions = {
