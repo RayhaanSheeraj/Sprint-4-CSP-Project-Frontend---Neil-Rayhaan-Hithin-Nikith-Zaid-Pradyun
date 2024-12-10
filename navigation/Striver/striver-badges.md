@@ -18,31 +18,18 @@ author: Kush
 </div>
 
 
-## Challenges
-Share your challenges with others!
-<br>
-<br>
-
-<div class="main">
-    <div id="sidebar"></div>
-    <div class="content">
-        <div class="form-container">
-            <form id="channelForm">
-                <div class="form-inputs">
-                    <input type="text" id="title" name="title" placeholder="Enter Title Here" required>
-                    <input type="file" id="fileInput" name="fileInput" style="display: none;">
-                    <button type="button" onclick="document.getElementById('fileInput').click()" class="file-button">➕</button>
-                </div>
-                <textarea id="textArea" name="textArea" placeholder="Post Here" required></textarea>
-                <button type="submit">Post</button>
-            </form>
-        </div>
-        <div id="channels"></div>
-    <div>
-</div>
-<div id="imageTest"></div>
-
 <style>
+    body {
+        background-image: url("../../images/background9674.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        color: #fff;
+    }
+
     /* Sidebar */
     .sidebar {
         position: fixed;
@@ -50,7 +37,7 @@ Share your challenges with others!
         left: 0;
         width: 180px;
         height: 100%;
-        background-color: #121212 !important;
+        background-color: #121212;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -58,6 +45,7 @@ Share your challenges with others!
         color: white;
         border-right: 1px solid gray;
     }
+
     .sidebar-btn {
         background-color: #121212;
         color: white !important;
@@ -70,356 +58,163 @@ Share your challenges with others!
         text-align: center;
         cursor: pointer;
         text-decoration: none;
+        transition: background 0.3s, transform 0.3s;
     }
+
     .bottom-btn {
-    margin-top: auto; /* Pushes the Terms button to the bottom */
-    }
-    .main {
-        display: flex;
-    }
-    .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        /* padding-left: 180px; */
+        margin-top: auto; /* Pushes the Profile button to the bottom */
     }
 
-    .friends-container {
-        display: flex;
-        overflow-x: auto; /* horizontal scrolling */
-        padding: 10px;
-        margin-bottom: 10px;
-        margin-top: 20px;
-        gap: 10px; 
-        scrollbar-width: thin;
-        scrollbar-color: #ccc transparent; /* Color for scrollbar */
-        width: 750px;
+    .sidebar-btn:hover {
+        background-color: #1e1e1e;
+        transform: scale(1.05);
     }
 
-    .friend {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        width: 80px; /* Set a width for each profile card */
-        text-align: center;
-        font-family: Arial, sans-serif;
-    }
-
-    .profile-pic {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%; /* Makes the image round */
-        overflow: hidden;
-        border: 2px solid #ddd;
-    }
-
-    .profile-pic img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .friend p {
-        margin: 5px 0 0;
-        font-size: 14px;
-        color: #333;
-    }
-
-    .live-badge {
-        position: absolute;
-        top: -5px;
-        left: 15px;
-        background-color: #000;
-        color: #fff;
-        font-size: 12px;
-        padding: 2px 6px;
-        border-radius: 12px;
-        font-weight: bold;
-    }
-
-    /* Form Styling */
-    .form-container {
-        padding: 20px;
-        background-color: #f4f4f4;
-        border-radius: 12px;
-        width: calc(100% - 400px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        font-family: Arial, sans-serif;
-    }
-
-    .form-inputs {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-    }
-
-    #title {
-        flex: 1;
-        padding: 12px;
-        border-radius: 8px;
-        border: 1px solid #ddd;
-        font-size: 16px;
-    }
-
-    .file-button {
-        padding: 10px;
+    .sidebar-btn.active {
         background-color: #333;
-        color: white;
-        border: none;
-        border-radius: 50%;
+        font-weight: bold;
+    }
+
+    /* Main Content */
+    .content {
+        margin-left: 200px;
+        padding: 40px;
+    }
+
+    h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    p {
         font-size: 18px;
-        cursor: pointer;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        margin-bottom: 20px;
+        text-align: justify;
     }
 
-    #textArea {
-        width: 100%;
-        padding: 12px;
-        border-radius: 8px;
-        border: 1px solid #ddd;
-        font-size: 16px;
-        margin-top: 10px;
-        resize: none;
-        height: 100px;
-    }
-
-    button[type="submit"] {
-        align-self: flex-start;
-        padding: 10px 20px;
-        background-color: #1da1f2;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-top: 10px;
-        transition: background-color 0.2s ease;
-    }
-
-    button[type="submit"]:hover {
-        background-color: #1a91da;
-    }
-
-    /* Channels Container */
-    #channels {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 20px;
-        padding-top: 20px;
     }
 
-    /* Post Cards Styling */
     .card {
-        width: calc(50% - 20px);
-        min-width: 300px;
+        background-color: rgba(0, 0, 0, 0.7);
         padding: 20px;
-        background-color: #ffffff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        text-align: left;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    .card-title {
-        font-size: 1.2em;
-        font-weight: bold;
-        color: #333;
+    .card h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
     }
 
-    .card-description {
-        color: #555;
-        font-size: 1em;
-        margin-top: 10px;
+    .card p {
+        font-size: 16px;
     }
 
-    .delete-button, .comment-button {
-        background-color: #ff4d4d;
+    .join-btn {
+        display: block;
+        margin: 30px auto;
+        background-color: #04AA6D;
         color: white;
         border: none;
-        padding: 8px 12px;
-        border-radius: 4px;
+        padding: 15px 30px;
+        font-size: 18px;
+        border-radius: 8px;
         cursor: pointer;
-        font-size: 0.9em;
-        margin-top: 15px;
+        text-align: center;
         transition: background-color 0.3s ease;
-        margin-right: 5px;
     }
 
-    .delete-button:hover, .comment-button:hover {
-        background-color: #ff1a1a;
+    .join-btn:hover {
+        background-color: #037a54;
+    }
+
+    /* Customization Styles */
+    .customization-container {
+        margin-top: 30px;
+    }
+    .customization-container label {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    .customization-container select, .customization-container input {
+        padding: 8px;
+        font-size: 14px;
+    }
+    .btn {
+        margin-top: 20px;
+        padding: 10px 15px;
+        background-color: #00796b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .btn:hover {
+        background-color: #004d40;
+    }
+    .reset-btn {
+        background-color: #ff5722;
+        margin-left: 10px;
     }
 </style>
 
-<script type="module">
-    // this is for the images
-    // import { pythonURI, fetchOptions } from '../assets/js/api/config.js';
-    // const fileInput = document.getElementById('fileInput');
-    // const file = fileInput.files[0];
-    // if (file) {
-    //     const reader = new FileReader();
-    //     reader.onload = function() {
-    //         const imageTest = document.getElementById('imageTest');
-    //         imageTest.innerHTML = `<img src="${reader.result}" alt="Profile Picture">`;
-    //     };
-    //     reader.readAsDataURL(file);
-    // }
+<div class="content">
+    <h2>Badges</h2>
+    <p style="font-size:1.1vw;">This page is dedicated to the badges you can earn based on your achievenments!</p>
 
+   
+</div>
 
+<script>
+    // Function to customize the page's background, text color, and font size
+    function customizePage() {
+        let bgColor = document.getElementById('bg-color').value;
+        let textColor = document.getElementById('text-color').value;
+        let fontSize = document.getElementById('font-size').value;
 
+        // Set the styles dynamically for the page elements
+        document.body.style.backgroundColor = bgColor;
+        document.body.style.color = textColor;
+        document.body.style.fontSize = fontSize;
 
-    // async function sendProfilePicture(base64String) {
-    // const URL = pythonURI + "/api/id/pfp";
+        // Apply custom styles to specific elements (like text in cards)
+        document.querySelectorAll('.card').forEach(function(card) {
+            card.style.backgroundColor = bgColor;  // Update card background color
+            card.style.color = textColor;  // Update text color inside cards
+        });
 
-    // const options = {
-    //     URL,
-    //     body: { pfp: base64String },
-    //     message: 'profile-message',
-    //     callback: () => {
-    //         console.log('Profile picture uploaded successfully!');
-    //     }
-    // };
+        document.querySelectorAll('.join-btn').forEach(function(btn) {
+            btn.style.fontSize = fontSize;  // Change font size of the button
+        });
 
-    // try {
-    //     await putUpdate(options);
-    // } catch (error) {
-    //     console.error('Error uploading profile picture:', error.message);
-    //     document.getElementById('profile-message').textContent = 'Error uploading profile picture: ' + error.message;
-    // }
-    // }
+        document.querySelectorAll('h2, h3, p').forEach(function(el) {
+            el.style.fontSize = fontSize;  // Change font size of headings and paragraphs
+        });
+    }
 
-    // async function convertToBase64(file) {
-    //     return new Promise((resolve, reject) => {
-    //         const reader = new FileReader();
-    //         reader.onload = () => resolve(reader.result.split(',')[1]); // Remove the prefix part of the result
-    //         reader.onerror = error => reject(error);
-    //         reader.readAsDataURL(file);
-    //     });
-    // }
+    // Function to apply customizations
+    function applyCustomizations() {
+        alert('Customizations Applied!');
+    }
+
+    // Function to reset customizations to the default settings
+    function resetCustomizations() {
+        // Reset background and text color to default
+        document.body.style.backgroundColor = '#f4f4f4';
+        document.body.style.color = '#333';
+        document.body.style.fontSize = '16px';
+
+        // Reset input fields to default
+        document.getElementById('bg-color').value = '#f4f4f4';
+        document.getElementById('text-color').value = '#333';
+        document.getElementById('font-size').value = '16px';
+
+        // Reset other elements to default
+        customizePage();  // Reapply default settings
+    }
 </script>
-
-<script type="module">
-    import { pythonURI, fetchOptions } from '../assets/js/api/config.js';
-    const container = document.getElementById("channels");
-
-    function openChatRoom(button) {
-        const channelId = button.getAttribute("id");
-        window.location.href = `{{site.baseurl}}/create_and_compete/realityroom?channelId=${channelId}`;
-    }
-
-    async function fetchUser() {
-        const response = await fetch(`${pythonURI}/api/user`, fetchOptions);
-        const user = await response.json();
-        console.log(user);
-        return user;
-    }
-
-    const user = fetchUser();
-
-    async function fetchChannels() {
-        try {
-            const groupName = 'Reality Room';
-            const responseData = {
-                group_name: groupName,
-            };
-            // add filter to get only messages from this channel
-            const response = await fetch(`${pythonURI}/api/channels/filter`, {
-                ...fetchOptions,
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(responseData)
-            });
-
-            if (!response.ok) {
-                throw new Error('Failed to fetch channels: ' + response.statusText);
-            }
-            const channels = await response.json();
-            container.innerHTML = "";
-
-            channels.forEach(channel => {
-                const card = document.createElement("div");
-                card.classList.add("card");
-
-                const title = document.createElement("h3");
-                title.classList.add("card-title");
-                title.textContent = channel.name;
-
-                // const imageBox = document.createElement("div");
-                // title.classList.add("image-box");
-
-                const description = document.createElement("p");
-                description.classList.add("card-description");
-                description.textContent = channel.attributes["content"];
-
-                const deleteButton = document.createElement("button");
-                deleteButton.classList.add("delete-button");
-                deleteButton.textContent = "Delete";
-
-                const commentButton = document.createElement("button");
-                commentButton.classList.add("comment-button");
-                commentButton.textContent = "Comment";
-                commentButton.setAttribute("id", channel.id);
-
-                commentButton.onclick = function () {
-                    openChatRoom(commentButton);
-                };
-
-                card.appendChild(title);
-                card.appendChild(description);
-                card.appendChild(deleteButton);
-                card.appendChild(commentButton);
-
-                container.appendChild(card);
-            });
-        } catch (error) {
-            console.error('Error fetching channels:', error);
-        }
-    }
-
-    document.getElementById('channelForm').addEventListener('submit', async function(event) {
-        event.preventDefault();
-
-        const title = document.getElementById('title').value;
-        const content = document.getElementById('textArea').value;
-        const group_id = 9;
-
-        const channelData = {
-            name: title,
-            group_id: group_id,
-            attributes: {"content": content}
-        };
-
-        try {
-            const response = await fetch(`${pythonURI}/api/channel`, {
-                ...fetchOptions,
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(channelData)
-            });
-
-            if (!response.ok) {
-                throw new Error('Failed to add channel: ' + response.statusText);
-            }
-
-            fetchChannels();
-            document.getElementById('channelForm').reset();
-        } catch (error) {
-            console.error('Error adding channel:', error);
-            alert('Error adding channel: ' + error.message);
-        }
-    });
-
-    fetchChannels();
-</script>
-
