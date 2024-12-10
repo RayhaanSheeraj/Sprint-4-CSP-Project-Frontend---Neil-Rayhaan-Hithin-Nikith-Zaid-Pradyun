@@ -17,6 +17,7 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-about" class="sidebar-btn">❓ About</a>
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-terms" class="sidebar-btn">📄 Terms</a>
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-profile" class="sidebar-btn bottom-btn">👤 Profile</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-badges" class="sidebar-btn bottom-btn">Badges</a>
 </div>
 
 <style>
@@ -37,7 +38,7 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
     .sidebar-btn {
         background-color: #121212;
         color: white !important;
-        border: 2px solid gray;
+        border: 2px solid cyan;
         margin: 10px 0;
         padding: 10px;
         border-radius: 8px;
@@ -51,199 +52,8 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
     margin-top: auto; 
     }
 </style>
-<div class="profile-container">
-  <div class="card">
-    <div class="profile-box">
-      <div class="profile-picture">
-        <div class="image-container" id="profileImageBox">
-        </div>
-        <label for="profilePicture" class="file-icon">
-          Upload Profile Picture <i class="fas fa-upload"></i>
-        </label>
-        <input type="file" id="profilePicture" accept="image/*" onchange="saveProfilePicture()">
-      </div>
-      <div class="profile-fields">
-        <form id="profileForm">
-          <div>
-            <label for="newUid">Enter New Username:</label>
-            <input type="text" id="newUid" placeholder="Username">
-          </div>
-          <div>
-            <label for="newAboutMe">Change Your About Me:</label>
-            <input type="text" id="newAboutMe" placeholder="About me">
-          </div>
-          <p id="profile-message" style="color: red;"></p>
-        </form>
-      </div>
-    </div>
-    <div class="preview-box">
-      <h2>Preview</h2>
-      <div class="preview-content">
-        <div id="previewImageBox">
-        </div>
-        <div class="preview-text">
-          <p><strong>Username:</strong> <span id="previewUsername">Not set</span></p>
-          <p><strong>About Me:</strong> <span id="previewAboutMe">Not set</span></p>
-        </div>
-      </div>
-    </div>
-    <div style="text-align: center;">
-      <button id="saveProfileButton" class="save-btn" onclick="saveProfile()">Save Profile</button>
-    </div>
-  </div>
-</div>
 
-<style>
-  body {
-    background-color: white;
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-
-  .profile-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-    padding-top: 30px;
-  }
-
-  .card {
-    display: flex;
-    flex-direction: column;
-    background-color: #c62828;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    color: white;
-    max-width: 900px;
-    width: 95%;
-  }
-
-  .profile-box {
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-
-  .profile-picture {
-    flex: 1;
-    text-align: center;
-  }
-
-  .profile-picture img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 3px solid white;
-  }
-
-  .file-icon {
-    display: inline-block;
-    color: white;
-    background-color: #b71c1c;
-    padding: 12px 20px;
-    border: 2px solid white;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 15px;
-  }
-
-  #profilePicture {
-    display: none;
-  }
-
-  .profile-fields {
-    flex: 2;
-    padding-left: 30px;
-  }
-
-  .profile-fields label {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: white;
-  }
-
-  .profile-fields input {
-    width: 100%;
-    padding: 15px;
-    font-size: 18px;
-    border-radius: 12px;
-    border: 2px solid white;
-    background-color: #e57373;
-    color: white;
-    margin-bottom: 20px;
-  }
-
-  .profile-fields input::placeholder {
-    color: #ffcccc;
-  }
-
-  .profile-fields input:focus {
-    outline: none;
-    border-color: white;
-  }
-
-  .preview-box {
-    margin-top: 20px;
-    background-color: #b71c1c;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: left;
-  }
-
-  .preview-box h2 {
-    margin-bottom: 20px;
-    text-align: center;
-    color: white;
-  }
-
-  .preview-content {
-    display: flex;
-    align-items: center;
-  }
-
-  .preview-content img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 20px;
-    border: 3px solid white;
-  }
-
-  .preview-text {
-    color: white;
-    font-size: 18px;
-    line-height: 1.6;
-  }
-
-  .preview-text p {
-    margin: 5px 0;
-  }
-
-  .save-btn {
-    background-color: white;
-    color: #c62828;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 18px;
-    margin-top: 20px;
-  }
-
-  .save-btn:hover {
-    background-color: #b71c1c;
-    color: white;
-  }
-</style>
-
-div class="profile-container">
+<div>
   <div class="card">
     <div class="profile-box">
       <div class="profile-picture">
@@ -297,7 +107,9 @@ div class="profile-container">
   .card {
     display: flex;
     flex-direction: column;
-    background-color: #c62828; 
+    background-color: 
+#11d0ed
+; 
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
@@ -331,7 +143,7 @@ div class="profile-container">
   .file-icon {
     display: inline-block;
     color: white;
-    background-color: #b71c1c;
+    background-color: #33b1c4;
     padding: 12px 20px;
     border: 2px solid white;
     border-radius: 12px;
@@ -378,7 +190,7 @@ div class="profile-container">
 
   .preview-box {
     margin-top: 20px;
-    background-color: #b71c1c;
+    background-color: #33b1c4;
     padding: 20px;
     border-radius: 12px;
     text-align: left;

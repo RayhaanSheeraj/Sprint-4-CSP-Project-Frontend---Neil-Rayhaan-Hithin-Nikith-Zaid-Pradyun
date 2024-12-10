@@ -13,9 +13,10 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-about" class="sidebar-btn">❓ About</a>
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-terms" class="sidebar-btn">📄 Terms</a>
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-profile" class="sidebar-btn bottom-btn">👤 Profile</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-badges" class="sidebar-btn bottom-btn">Badges</a>
 </div>
 
-## Achievements
+<h1 style="color:cyan;">Achievements</h1>
 Share your achievements with others!
 <br>
 <br>
@@ -58,7 +59,7 @@ Share your achievements with others!
     .sidebar-btn {
         background-color: #121212;
         color: white !important;
-        border: 2px solid gray;
+        border: 2px solid cyan;
         margin: 10px 0;
         padding: 10px;
         border-radius: 8px;
@@ -431,14 +432,14 @@ Share your achievements with others!
 <div class="members-section">
     <h3>Members</h3>
     <ul>
-        <li>Person</li>
-        <li>Person</li>
-        <li>Person</li>
-        <li>Person</li>
-        <li>Person</li>
-        <li>Person</li>
-        <li>Person</li>
-        <li>Person</li>
+        <li>⚪ John</li>
+        <li>⚪ Mary</li>
+        <li>⚪ Jack</li>
+        <li>⚪ Bob</li>
+        <li>⚪ Matt</li>
+        <li>⚪ Mark</li>
+        <li>⚪ Juan</li>
+        <li>⚪ Travis</li>
     </ul>
 </div>
 <style>

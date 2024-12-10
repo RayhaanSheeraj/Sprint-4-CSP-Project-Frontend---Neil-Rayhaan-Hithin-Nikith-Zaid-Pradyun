@@ -13,6 +13,7 @@ author: Hithin
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-about" class="sidebar-btn">❓ About</a>
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-terms" class="sidebar-btn">📄 Terms</a>
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-profile" class="sidebar-btn bottom-btn">👤 Profile</a>
+    <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-badges" class="sidebar-btn bottom-btn">Badges</a>
 </div>
 
 <style>
@@ -42,7 +43,7 @@ author: Hithin
     .sidebar-btn {
         background-color: #121212;
         color: white !important;
-        border: 2px solid gray;
+        border: 2px solid cyan;
         margin: 10px 0;
         padding: 10px;
         border-radius: 8px;
@@ -59,7 +60,7 @@ author: Hithin
 
 <div id="main-content">
     <div id="chatPanel">
-        <h3>Game</h3>
+        <h3>Chat Room</h3>
         <div id="outputDiv"></div>
         <form>
             <button class="plus-button" onclick="triggerFileUpload()">+</button>
@@ -81,13 +82,10 @@ author: Hithin
             <p id="score">It is an honor to get to hear about you</p>
         </div>
     </div>
-    <div id="guessPrompt" style="display: none;">
-        <p class="modal-text">Who do you think you've been chatting with? Choose one:</p>
-        <div class="guess-options">
-            <button class="guess-button" onclick="submitGuess('human')">Human</button>
-            <button class="guess-button" onclick="submitGuess('ai')">AI</button>
-        </div>
-    </div>
+
+        
+  
+
 </div>
 
 <style>
@@ -286,7 +284,7 @@ author: Hithin
 </style>
 
 <script>
-    const names = ["John", "Sarah", "Alex", "Emily", "Michael", "Jessica", "David", "Laura"];
+    const names = ["Striver"];
     const states = ["Iowa", "California", "New York", "Texas", "Florida", "Nevada", "Ohio", "Michigan"];
 
     function getRandomItem(array) {
@@ -471,13 +469,12 @@ author: Hithin
 
 </script>
 
-<!-- Insert this inside the main content -->
 <div class="customization-panel">
     <h4>Customize Appearance</h4>
     <label for="bgColorSlider">Box Background Color:</label>
     <input type="color" id="bgColorPicker" value="#ffffff" />
     <label for="fontColorPicker">Font Color:</label>
-    <input type="color" id="fontColorPicker" value="#000000" />
+    <input type="color" id="fontColorPicker" value="#ffffff" />
 </div>
 
 <style>
@@ -503,5 +500,29 @@ author: Hithin
     fontColorPicker.addEventListener("input", () => {
         boxElement.style.color = fontColorPicker.value;
     });
+
+body {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff9a76, #ffcd77, #fff59e, #b0f4e6, #80bfff, #9d74ff, #d96cff);
+    background-size: 150% 150%;
+    animation: gradientShift 10s ease infinite;
+    color: #fff;
+}
+
+/* Keyframes for animated gradient background */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 </script>
+
+
 
