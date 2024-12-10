@@ -16,7 +16,7 @@ author: Hithin, Nikith, Rayhaan, Pradyun, Neil, Kush, Zaid
     <a href="/Sprint-4-CSP-Project-Frontend---Neil-Rayhaan-Hithin-Nikith-Zaid-Pradyun/Striver/striver-badges" class="sidebar-btn bottom-btn">Badges</a>
 </div>
 
-## Achievements
+<h1 style="color:cyan;">Achievements</h1>
 Share your achievements with others!
 <br>
 <br>
