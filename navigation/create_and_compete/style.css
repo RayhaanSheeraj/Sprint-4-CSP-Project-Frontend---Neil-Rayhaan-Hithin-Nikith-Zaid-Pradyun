@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 20px;
     background: linear-gradient(135deg, #141e30, #243b55);
-    color: #e0e0e0;
+    color: #06dff7;
     line-height: 1.6;
 }
 
@@ -86,7 +86,7 @@ textarea:focus {
     background: #1e1e1e;
     border-radius: 12px;
     border: 1px solid #00d9ff;
-    color: #e0e0e0;
+    color: #07dfef;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
