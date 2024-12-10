@@ -132,7 +132,7 @@ show_reading_time: false
         const signupButton = document.querySelector(".signup-card button");
 
         // Disable the button and change its color
-        signupButton.disabled = true;
+        signupButton.disabled = false;
         signupButton.style.backgroundColor = '#07027d'; // Light gray to indicate disabled state
 
         const signupOptions = {
