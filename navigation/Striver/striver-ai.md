@@ -184,9 +184,10 @@ author: Hithin
     .instructions-box {
         width: 250px;
         padding: 20px;
-        background-color: #f4f4f4;
+        background-color: black;
+        border: 3px solid cyan; /* Added cyan border */
         border-radius: 8px;
-        color: #333;
+        color: white;
         height: 430px; /* Adjust this value as needed */
         display: flex;
         flex-direction: column;
@@ -202,7 +203,7 @@ author: Hithin
 
     .instructions-box p, .instructions-box ul {
         font-size: 0.9em;
-        color: #333;
+        color: white;
     }
     
     .instructions-box ul {
