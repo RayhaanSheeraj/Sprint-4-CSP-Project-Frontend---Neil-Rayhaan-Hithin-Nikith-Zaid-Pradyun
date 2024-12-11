@@ -166,6 +166,9 @@ author: Kush
 <div class="content">
     <h2>Badges</h2>
     <p style="font-size:1.1vw;">This page is dedicated to the badges you can earn based on your achievenments!</p>
+    <button>
+            <img src="images/muscle.jpg" alt="Submit Button" style="width: 100px; height: auto;">
+        </button>
 
    
 </div>
